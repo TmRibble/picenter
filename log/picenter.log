@@ -1,0 +1,31 @@
+INFO: 2024-07-30:20:27:53: picenter: Logger created successfully
+INFO: 2024-07-30:20:27:53: picenter: Currently running Pi Center v1.0.0
+INFO: 2024-07-30:20:27:53: picenter: Initializing...
+INFO: 2024-07-30:20:27:53: picenter: Reading config file...
+INFO: 2024-07-30:20:27:53: picenter: Initializing systems...
+INFO: 2024-07-30:20:27:53: picenter_backend: Testing connection to python backend...
+ERROR: 2024-07-30:20:27:53: picenter_backend: Connection to python backend failed
+ERROR: 2024-07-30:20:27:53: picenter: Initialization of backend failed
+ERROR: 2024-07-30:20:27:53: picenter: Initialization of calender failed
+INFO: 2024-07-30:20:27:53: picenter: Initialization of music succeeded
+INFO: 2024-07-30:20:27:53: picenter: Initialization of graphics succeeded
+INFO: 2024-07-30:20:27:53: picenter_music: Installing song... Info[ Artist: my hero, Song: foo fighters ]
+ERROR: 2024-07-30:20:27:53: picenter_music: Error while downloading song
+ERROR: 2024-07-30:20:27:53: picenter_music: java.io.IOException: Cannot run program "cd "C:\Users\tmrib\code\projects\picenter\music\songs\foofighters\myhero"": CreateProcess error=2, The system cannot find the file specified
+
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1143)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1073)
+	at java.base/java.lang.Runtime.exec(Runtime.java:594)
+	at java.base/java.lang.Runtime.exec(Runtime.java:453)
+	at com.picenter.Music.installSong(Music.java:162)
+	at com.picenter.Music.playSong(Music.java:127)
+	at com.picenter.PiCenter.init(PiCenter.java:48)
+	at com.picenter.PiCenter.<init>(PiCenter.java:25)
+	at com.picenter.PiCenter.main(PiCenter.java:114)INFO: 2024-07-30:20:27:53: picenter_music: Done
+ERROR: 2024-07-30:20:27:53: picenter_music: Error while playing song
+ERROR: 2024-07-30:20:27:53: picenter_music: java.lang.ArrayIndexOutOfBoundsException: Index 0 out of bounds for length 0
+
+	at com.picenter.Music.playSong(Music.java:142)
+	at com.picenter.PiCenter.init(PiCenter.java:48)
+	at com.picenter.PiCenter.<init>(PiCenter.java:25)
+	at com.picenter.PiCenter.main(PiCenter.java:114)
